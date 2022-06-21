@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codepen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
 </head>
 <body>
-    <div class="container"></div>
+    <header>
+        <h1 class="titre">Pencode version 0.0.1</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <div>
+                <button class="btn btn-secondary" id="strong" >strong</button>
+                <button class="btn btn-secondary" id="em" >em</button>
+                <button class="btn btn-secondary" id="span" >span</button>
+                <button class="btn btn-secondary" id="cite" >cite</button>
+            </div>
+        </nav>
+        <div class="container box">
+            <div class="html">
+                <textarea id="html"></textarea>
+            </div>
+
+            <div id="progress">
+                <div id="progress_bar"></div>
+                <div id="char_count">200</div>
+            </div>
+
+            <div>
+                <div>
+                    <h3>Live Coding</h3>
+                </div>
+                <div id="live"></div>
+            </div>
+        </div>
+    </div>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
