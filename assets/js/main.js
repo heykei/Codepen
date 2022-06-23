@@ -40,4 +40,3 @@ html.onkeyup = html.onkeydown = function(){
                 progress_bar.style.backgroundColor = "Red"; 
             }
 };
-
