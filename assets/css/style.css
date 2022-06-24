@@ -22,12 +22,8 @@ nav{
     margin-bottom: 30px;
 }
 
-.btn {
-    background-color: lightslategray;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    
+.button {
+    padding: 10px;
 }
 
 .container .box{

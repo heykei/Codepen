@@ -1,11 +1,16 @@
 const gras = document.getElementById("gras");
 const ita = document.getElementById("ita");
+const h = document.getElementById("h");
+const para = document.getElementById("para");
+const select = document.getElementById("select");
+const col = document.getElementById("col")
 
 const html = document.getElementById("html");
 const css = document.getElementById("css");
-const js = document.getElementById("js")
+const styl = document.getElementById("styl");
+const js = document.getElementById("js");
 const max = 200;
-const progress_bar = document.getElementById("progress_bar")
+const progress_bar = document.getElementById("progress_bar");
 
 gras.addEventListener('click', () => {
     html.value +="<strong></strong>";
@@ -13,6 +18,22 @@ gras.addEventListener('click', () => {
 
 ita.addEventListener('click', () => {
     html.value +="<em></em>";
+});
+
+h.addEventListener('click', () => {
+    html.value +="<h1></h1>";
+});
+
+para.addEventListener('click', () => {
+    html.value +="<p></p>";
+});
+
+select.addEventListener('click', () => {
+    html.value +="<span></span>";
+});
+
+col.addEventListener('click', () => {
+    css.value +="{ color: };";
 });
 
 html.onkeyup = html.onkeydown = function(){
@@ -40,3 +61,11 @@ html.onkeyup = html.onkeydown = function(){
                 progress_bar.style.backgroundColor = "Red"; 
             }
 };
+
+function add_color(){
+    const col = document.querySelector("#col");
+    col.addEventListener("click", () => {
+        css.value += "{color: ;}";
+    })
+}
+add_color();
