@@ -3,7 +3,6 @@ const ita = document.getElementById("ita");
 const h = document.getElementById("h");
 const para = document.getElementById("para");
 const select = document.getElementById("select");
-const col = document.getElementById("col")
 
 const html = document.getElementById("html");
 const css = document.getElementById("css");
@@ -11,6 +10,41 @@ const styl = document.getElementById("styl");
 const js = document.getElementById("js");
 const max = 200;
 const progress_bar = document.getElementById("progress_bar");
+const load = document.getElementById("img");
+
+html.addEventListener("click", () => {
+    load.style.visibility = "visible";
+});
+html.addEventListener("input", () => {
+    load.style.visibility = "visible";
+});
+html.addEventListener("output", () => {
+    load.style.visibility = "hidden";
+});
+
+css.addEventListener("click", () => {
+    load.style.visibility = "visible";
+});
+css.addEventListener("input", () => {
+    load.style.visibility = "visible";
+});
+css.addEventListener("output", () => {
+    load.style.visibility = "hidden";
+});
+
+js.addEventListener("click", () => {
+    load.style.visibility = "visible";
+});
+js.addEventListener("input", () => {
+    load.style.visibility = "visible";
+});
+js.addEventListener("output", () => {
+    load.style.visibility = "hidden";
+});
+
+document.addEventListener("mouseover", () => {
+    load.style.visibility = "hidden";
+});
 
 gras.addEventListener('click', () => {
     html.value +="<strong></strong>";
@@ -32,9 +66,9 @@ select.addEventListener('click', () => {
     html.value +="<span></span>";
 });
 
-col.addEventListener('click', () => {
-    css.value +="{ color: };";
-});
+// col.addEventListener('click', () => {
+//     css.value +="{ color: };";
+// });
 
 html.onkeyup = html.onkeydown = function(){
     document.getElementById("live").innerHTML = this.value;
@@ -65,7 +99,12 @@ html.onkeyup = html.onkeydown = function(){
 function add_color(){
     const col = document.querySelector("#col");
     col.addEventListener("click", () => {
-        css.value += "{color: ;}";
+     css.value += " {color: ;}";
     })
 }
 add_color();
+
+function change_color() {
+    const change = document.querySelector("live");
+    change.lastChild.
+}
